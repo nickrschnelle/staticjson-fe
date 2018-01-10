@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "rm -rf /dist && parcel src/index.html"
+    "start": "rm -rf dist && parcel src/index.html",
+    "build": "rm -rf dist && parcel build src/index.html --public-url ./"
   },
   "repository": {
     "type": "git",
@@ -22,10 +23,13 @@
     "react-dom": "^16.2.0"
   },
   "devDependencies": {
+    "autoprefixer": "^7.2.4",
+    "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
     "node-sass": "^4.7.2",
     "parcel-bundler": "^1.4.1",
+    "postcss-modules": "^1.1.0",
     "react-codemirror": "^1.0.0",
     "stylus": "^0.54.5"
   }
